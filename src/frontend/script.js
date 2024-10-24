@@ -1,4 +1,5 @@
-// Fungsi menggambar grid dan sumbu yang presisi
+document.addEventListener('DOMContentLoaded', function() {
+    // Fungsi menggambar grid dan sumbu yang presisi
 function drawGrid(ctx, width, height) {
     const unitSize = 25; // Ukuran satuan grid, disesuaikan agar lebih rapi
     const centerX = Math.floor(width / 2);
@@ -243,3 +244,4 @@ function showPage(page) {
   
     toggleMenu();
 }
+});
