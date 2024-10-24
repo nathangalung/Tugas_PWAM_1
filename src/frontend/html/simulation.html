@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="../../frontend/css/simulation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Jersey+10+Charted&family=Jersey+15&display=swap" rel="stylesheet">
+    <!-- js -->
+    <script src="../../script.js"></script>
     <title>Graphlung Virtual Lab - Simulation</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -15,141 +21,150 @@
                 <li class="dropdown">
                     <a href="home.html">HOME</a>
                     <ul class="dropdown-content">
-                        <li><a href="#general">General</a></li>
-                        <li><a href="#math">Math</a></li>
-                        <li><a href="#graph">Graph</a></li>
+                        <li><a href="home.html#general">General</a></li>
+                        <li><a href="home.html#math">Math</a></li>
+                        <li><a href="home.html#graph">Graph</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="simulation.html">SIMULATION</a>
                     <ul class="dropdown-content">
-                        <li><a href="#cubic">Cubic</a></li>
-                        <li><a href="#sinus">Sinus</a></li>
-                        <li><a href="#cosinus">Cosinus</a></li>
-                        <li><a href="#tangen">Tangen</a></li>
+                        <li><a href="simulation.html#cubic">Cubic</a></li>
+                        <li><a href="simulation.html#sinus">Sinus</a></li>
+                        <li><a href="simulation.html#cosinus">Cosinus</a></li>
+                        <li><a href="simulation.html#tangen">Tangen</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
     </header>
 
-    <section id="simulation" class="content-section">
-        <h2>Simulation Graphs</h2>
-
-        <!-- Cubic Graph Section -->
-        <section id="cubic" class="graph-section">
-            <h3>Cubic Graph</h3>
-            <canvas id="cubic-graph" width="400" height="400"></canvas>
+    <!-- Cubic Graph Section -->
+    <section id="cubic" class="graph-section">
+        <div class="graphContainer">
+            <div class="left-section">
+                <h3>CUBIC GRAPH</h3>
+                <canvas id="cubic-graph" width="400" height="400"></canvas>
+            </div>
             <div class="controls">
                 <label>a: <span id="cubic-a-value">0</span></label>
                 <input type="range" id="cubic-a-slider" min="-7" max="7" value="0">
-
+    
                 <label>b: <span id="cubic-b-value">0</span></label>
                 <input type="range" id="cubic-b-slider" min="-7" max="7" value="0">
-
+    
                 <label>c: <span id="cubic-c-value">0</span></label>
                 <input type="range" id="cubic-c-slider" min="-7" max="7" value="0">
-
+    
                 <label>d: <span id="cubic-d-value">0</span></label>
                 <input type="range" id="cubic-d-slider" min="-7" max="7" value="0">
-
+    
                 <label>Comparator: <span id="cubic-comparator-value">=</span></label>
                 <select class="comparator">
                     <option value="=">=</option>
                     <option value="<"><</option>
                     <option value=">">></option>
                 </select>
-
+    
                 <p>Equation: <span id="cubic-equation-display">y = 0x³ + 0x² + 0x + 0</span></p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Sinus Graph Section -->
-        <section id="sinus" class="graph-section">
-            <h3>Sinus Graph</h3>
-            <canvas id="sinus-graph" width="400" height="400"></canvas>
+    <!-- Sinus Graph Section -->
+    <section id="sinus" class="graph-section">
+        <div class="graphContainer">
+            <div class="left-section">
+                <h3>SINUS GRAPH</h3>
+                <canvas id="sinus-graph" width="400" height="400"></canvas>
+            </div>
             <div class="controls">
                 <label>a: <span id="sinus-a-value">0</span></label>
                 <input type="range" id="sinus-a-slider" min="-7" max="7" value="0">
-
+    
                 <label>b: <span id="sinus-b-value">0</span></label>
                 <input type="range" id="sinus-b-slider" min="-7" max="7" value="0">
-
+    
                 <label>c: <span id="sinus-c-value">0</span></label>
                 <input type="range" id="sinus-c-slider" min="-7" max="7" value="0">
-
+    
                 <label>d: <span id="sinus-d-value">0</span></label>
                 <input type="range" id="sinus-d-slider" min="-7" max="7" value="0">
-
+    
                 <label>Comparator: <span id="sinus-comparator-value">=</span></label>
                 <select class="comparator">
                     <option value="=">=</option>
                     <option value="<"><</option>
                     <option value=">">></option>
                 </select>
-
+    
                 <p>Equation: <span id="sinus-equation-display">y = a sin(x)³ + b sin(x)² + c sin(x) + d</span></p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Cosinus Graph Section -->
-        <section id="cosinus" class="graph-section">
-            <h3>Cosinus Graph</h3>
-            <canvas id="cosinus-graph" width="400" height="400"></canvas>
+    <!-- Cosinus Graph Section -->
+    <section id="cosinus" class="graph-section">
+        <div class="graphContainer">
+            <div class="left-section">
+                <h3>COSINUS GRAPH</h3>
+                <canvas id="cosinus-graph" width="400" height="400"></canvas>
+            </div>
             <div class="controls">
                 <label>a: <span id="cosinus-a-value">0</span></label>
                 <input type="range" id="cosinus-a-slider" min="-7" max="7" value="0">
-
+    
                 <label>b: <span id="cosinus-b-value">0</span></label>
                 <input type="range" id="cosinus-b-slider" min="-7" max="7" value="0">
-
+    
                 <label>c: <span id="cosinus-c-value">0</span></label>
                 <input type="range" id="cosinus-c-slider" min="-7" max="7" value="0">
-
+    
                 <label>d: <span id="cosinus-d-value">0</span></label>
                 <input type="range" id="cosinus-d-slider" min="-7" max="7" value="0">
-
+    
                 <label>Comparator: <span id="cosinus-comparator-value">=</span></label>
                 <select class="comparator">
                     <option value="=">=</option>
                     <option value="<"><</option>
                     <option value=">">></option>
                 </select>
-
+    
                 <p>Equation: <span id="cosinus-equation-display">y = a sin(x)³ + b sin(x)² + c sin(x) + d</span></p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Tangen Graph Section -->
-        <section id="tangen" class="graph-section">
-            <h3>Tangen Graph</h3>
-            <canvas id="tangen-graph" width="400" height="400"></canvas>
+    <!-- Tangen Graph Section -->
+    <section id="tangen" class="graph-section">
+        <div class="graphContainer">
+            <div class="left-section">
+                <h3>TANGEN GRAPH</h3>
+                <canvas id="tangen-graph" width="400" height="400"></canvas>
+            </div>
             <div class="controls">
                 <label>a: <span id="tangen-a-value">0</span></label>
                 <input type="range" id="tangen-a-slider" min="-7" max="7" value="0">
-
+    
                 <label>b: <span id="tangen-b-value">0</span></label>
                 <input type="range" id="tangen-b-slider" min="-7" max="7" value="0">
-
+    
                 <label>c: <span id="tangen-c-value">0</span></label>
                 <input type="range" id="tangen-c-slider" min="-7" max="7" value="0">
-
+    
                 <label>d: <span id="tangen-d-value">0</span></label>
                 <input type="range" id="tangen-d-slider" min="-7" max="7" value="0">
-
+    
                 <label>Comparator: <span id="tangen-comparator-value">=</span></label>
                 <select class="comparator">
                     <option value="=">=</option>
                     <option value="<"><</option>
                     <option value=">">></option>
                 </select>
-
+    
                 <p>Equation: <span id="tangen-equation-display">y = a sin(x)³ + b sin(x)² + c sin(x) + d</span></p>
             </div>
-        </section>
-
+        </div>
     </section>
-
-    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="../../frontend/css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Jersey+10+Charted&family=Jersey+15&display=swap" rel="stylesheet">
+
+    <title>Graphlung Virtual Lab - Home</title>
+</head>
+<body>
+    <header>
+        <h1>Graphlung Virtual Lab</h1>
+        <nav>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <ul class="nav-links" id="nav-links">
+                <li class="dropdown">
+                    <a href="home.html">HOME</a>
+                    <ul class="dropdown-content">
+                        <li><a href="home.html#general">General</a></li>
+                        <li><a href="home.html#math">Math</a></li>
+                        <li><a href="home.html#graph">Graph</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="simulation.html">SIMULATION</a>
+                    <ul class="dropdown-content">
+                        <li><a href="simulation.html#cubic">Cubic</a></li>
+                        <li><a href="simulation.html#sinus">Sinus</a></li>
+                        <li><a href="simulation.html#cosinus">Cosinus</a></li>
+                        <li><a href="simulation.html#tangen">Tangen</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="home-container">
+            <h1>Welcome to <span>Graphlung</span> Virtual Lab</h1>
+        </div>
+    </section>           
+
+    <section id="general">
+        <div class="general-container">
+            <h2>General / About</h2>
+            <p>Virtual Lab Matematika ini dirancang sebagai platform interaktif untuk mempelajari dan menyimulasikan grafik 
+                dari berbagai persamaan matematika, seperti cubic, sinus, cosinus, dan tangen. Dengan menggunakan lab ini, 
+                mahasiswa dapat lebih mudah memahami bagaimana perubahan dalam persamaan berdampak pada grafik secara visual. 
+                Target utama dari virtual lab ini adalah mahasiswa yang ingin memperdalam pemahaman mereka tentang logika 
+                matematika dan grafik persamaan. Di masa depan, virtual lab ini akan dikembangkan dengan menambahkan fitur 
+                game yang menyerupai Desmos, sehingga mahasiswa tidak hanya belajar teori, tetapi juga melatih keterampilan 
+                logika matematika mereka melalui pengalaman interaktif.</p>
+        </div>
+        <div class="general-image">
+            <img src="../../../img/general.jpg" alt="General Image">
+        </div>
+    </section>
+
+    <section id="math">
+        <div class="math-image">
+            <img src="../../../img/math.jpg" alt="Math Image">
+        </div>
+        <div class="math-container">
+            <h2>Math</h2>
+            <p>Dalam dunia perkuliahan, matematika merupakan salah satu fondasi penting, khususnya dalam memahami berbagai 
+                persamaan dan hubungan logis di baliknya. Virtual Lab ini fokus pada persamaan cubic, kuadrat, sinus, 
+                cosinus, dan tangen, yang semuanya memiliki aplikasi luas di berbagai bidang studi. Memahami logika matematika 
+                di balik persamaan-persamaan ini membantu mahasiswa tidak hanya dalam menyelesaikan soal, tetapi juga dalam 
+                mengembangkan cara berpikir kritis. Virtual lab ini memberikan simulasi langsung yang membantu menghubungkan 
+                teori persamaan dengan penerapan grafik, menjadikannya alat pembelajaran yang sangat berguna.</p>
+        </div>
+    </section>
+
+    <section id="graph">
+        <div class="graph-container">
+            <h2>Graph</h2>
+            <p>Persamaan yang digunakan di Virtual Lab ini semuanya berbentuk satu variabel dengan format umum y = f(x). 
+                Melalui lab ini, mahasiswa dapat melihat secara langsung bagaimana perubahan kecil dalam persamaan, seperti 
+                koefisien atau konstanta, dapat mempengaruhi bentuk grafik. Misalnya, pada persamaan kuadrat, jika nilai a 
+                negatif, grafik akan membentuk parabola yang menghadap ke bawah, sementara jika positif, grafik menghadap ke 
+                atas. Begitu juga dengan persamaan sinus dan cosinus yang menunjukkan pola gelombang, serta tangen yang 
+                memiliki karakteristik unik berupa asimtot vertikal. Melalui visualisasi ini, mahasiswa dapat lebih cepat 
+                memahami sifat-sifat khusus dari setiap jenis persamaan dan grafik yang dihasilkannya.</p>
+        </div>
+        <div class="graph-image">
+            <img src="../../../img/graph.jpg" alt="Graph Image">
+        </div>  
+    </section>
+
+    <script src="../../script.js"></script>
+</body>
+</html>
+
+
