@@ -1,0 +1,237 @@
+/* GLOBAL STYLE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+  }
+  
+  /* HEADER STYLING */
+  header {
+    background-color: #2c003e;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* LOGO / TITLE IN HEADER */
+  header h1 {
+    margin-left: 20px;
+    font-size: 24px;
+    white-space: nowrap;
+  }
+  
+  /* NAVBAR */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+    position: relative;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .nav-links a:hover {
+    background-color: #4b0082;
+    border-radius: 5px;
+  }
+  
+  .nav-links a:active {
+    color: yellow;
+  }
+  
+  /* DROPDOWN MENU */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #4b0082;
+    list-style: none;
+    padding: 10px;
+    border-radius: 5px;
+    top: 100%; /* Position directly below parent */
+    left: 0;
+    z-index: 1001;
+    min-width: 150px;
+  }
+  
+  /* Ensure dropdown stays open when hovered */
+  .dropdown:hover .dropdown-content,
+  .dropdown-content:hover {
+    display: block;
+  }
+  
+  .dropdown-content li {
+    padding: 5px 0;
+  }
+  
+  .dropdown-content a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #6a0dad;
+  }
+  
+  /* HAMBURGER MENU FOR MOBILE */
+  .hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  /* CONTENT SECTION */
+  .content-section {
+    padding: 100px 20px;  /* Adjust for fixed header */
+    text-align: center;
+  }
+  
+  .graph-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  /* CANVAS STYLING */
+  canvas {
+    background-color: #eaeaea;
+    margin-top: 20px;
+    border: 1px solid #000;
+  }
+  
+  /* SIMULATION SECTION LAYOUT */
+  .graph-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 40px;
+    padding: 20px;
+  }
+  
+  /* Canvas on the Left Side */
+  .graph-section canvas {
+    width: 400px;
+    height: 400px;
+    flex: 1;
+    margin-right: 20px;
+    border: 1px solid #000;
+  }
+  
+  /* Controls on the Right Side */
+  .graph-section .controls {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 300px;
+  }
+  
+  /* Control Items such as Sliders and Dropdowns */
+  .controls label {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  .controls input[type="range"] {
+    width: 100%;
+    margin: 5px 0;
+  }
+  
+  /* Comparator Dropdown Styling */
+  .controls select {
+    width: 40%;
+    margin: 10px 0;
+    padding: 5px;
+    font-size: 16px;
+    display: flex;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+  
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #2c003e;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+    }
+  
+    .nav-links.active {
+        display: flex;
+    }
+  
+    .nav-links li {
+        margin: 10px 0;
+    }
+  
+    .graph-container {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .graph-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 40px;
+      padding: 20px;
+    }
+  
+  /* Canvas Styling */
+    .graph-section canvas {
+        width: 400px;
+        height: 400px;
+        border: 1px solid black;
+        margin-right: 20px;
+    }
+  
+    /* Controls Styling */
+    .controls {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        align-items: flex-start;
+    }
+  
+    .controls input[type="range"] {
+        width: 100%;
+        margin: 5px 0;
+    }
+  }
